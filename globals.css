@@ -1,0 +1,11 @@
+:root {
+  --background: hsla(270, 64%, 40%, 1);
+  --background-smoky: hsla(240, 29%, 97%, 1);
+  --secondary: hsla(310, 85%, 43%, 1);
+  --accent: hsla(13, 91%, 55%, 1);
+
+  --text-black: hsla(0, 0%, 0%, 1);
+  --text-white: hsla(0, 0%, 100%, 1);
+  --text-smoky: hsla(240, 13%, 64%, 1);
+  --text-accent: hsla(158, 88%, 38%, 1);
+}
