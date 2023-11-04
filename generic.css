@@ -1,0 +1,47 @@
+@import "globals.css";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styles for headings */
+h1 {
+  font-size: var(--font-size-huge);
+  line-height: var(--line-height-huge);
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: var(--font-size-huge);
+  line-height: var(--line-height-huge);
+  font-weight: var(--font-weight-bold);
+}
+
+h3 {
+  font-size: var(--font-size-medium);
+  line-height: var(--line-height-big);
+  font-weight: var(--font-weight-bolder);
+}
+
+/* Styles for paragraphs */
+p {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-tiny);
+  font-weight: var(--font-weight-regular);
+}
+
+/* Styles for links */
+a {
+  text-decoration: underline;
+}
+
+/* Styles for images */
+img {
+  max-width: 100%;
+  height: auto;
+}
