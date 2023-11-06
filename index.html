@@ -8,22 +8,53 @@
   </head>
   <body>
     <header>
+      <!------------------------------ MOBILE HEADER  ------------------------------>
+
       <div class="mobile-h">
         <img src="assets/images/vector/icon-28.svg" alt="" />
         <div><h1>ТОВАРЫ И ТОЧКА</h1></div>
         <img src="assets/images/vector/search-icon.svg" alt="" />
       </div>
 
+      <!------------------------------ NON-MOBILE HEADER ------------------------------>
+
       <div class="big-screen-h">
-        <img src="assets/images/vector/menu-burger-icon.svg" alt="" />
-        <h1>ТОВАРЫ И ТОЧКА</h1>
-        <img src="assets/images/vector/search-icon.svg" alt="" />
+        <div class="burger-icon-container">
+          <img src="assets/images/vector/menu-burger-icon.svg" alt="" />
+        </div>
+        <h1 class="title">ТОВАРЫ И ТОЧКА</h1>
+        <form>
+          <input placeholder="Я ищу..." type="search" />
+          <button type="submit"></button>
+        </form>
+
+        <nav>
+          <a>
+            <div>
+              <img src="assets/images/vector/profile-icon.svg" alt="" />
+            </div>
+
+            <h3>Профиль</h3>
+          </a>
+
+          <a>
+            <div>
+              <img src="assets/images/vector/cart-icon.svg" alt="" />
+            </div>
+
+            <h3>Корзина</h3>
+          </a>
+        </nav>
       </div>
     </header>
 
     <main>
+      <!----------------------------------- MOBILE MAIN ------------------------------>
+
       <section class="cart-section">Cart</section>
       <section class="total-bill-section">Bill</section>
+
+      <!------------------------------ NON-MOBILE HEADER ------------------------------>
     </main>
 
     <footer>
