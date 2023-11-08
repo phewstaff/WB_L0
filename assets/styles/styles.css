@@ -22,7 +22,11 @@ ul {
   list-style: none;
 }
 
-hr.devider {
+.grayscaled {
+  filter: grayscale(100%);
+}
+
+hr.divider {
   border-top: 1px solid #bbb;
 }
 
@@ -142,6 +146,7 @@ main {
   }
 
   .card {
+    position: relative;
     margin-top: 16px;
     padding-top: 12px;
     border-top: solid 1px rgb(0, 0, 0, 0.2);
@@ -189,9 +194,59 @@ main {
     .manufacturer {
       margin-top: 10px;
     }
+
+    .css-checkbox + label {
+      position: absolute;
+      top: 17px;
+      left: 5px;
+    }
+  }
+
+  .item-actions {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+
+    & div {
+      display: flex;
+    }
+    .counter {
+      min-width: 80px;
+      min-height: 32px;
+      border-radius: 4px;
+      background-color: white;
+      justify-content: space-between;
+      padding: 0 9px;
+      align-items: center;
+
+      & span:last-child {
+        font-size: larger;
+      }
+    }
+
+    .item-buttons {
+      gap: 24px;
+      margin-left: auto;
+    }
+
+    .remaining {
+      padding-left: 16px;
+      color: var(--accent);
+      font-size: var(--font-size-microscopic);
+    }
+  }
+
+  .not-available {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 48px;
+
+    & h2 {
+      font-weight: var(--font-weight-regular);
+      font-size: var(--font-size-tiny);
+    }
   }
 }
-
 /* ---------------------------------------------------------------------------------------------------- */
 
 footer {

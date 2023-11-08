@@ -94,3 +94,7 @@ img {
 
   background-color: var(--secondary);
 }
+
+.no-label + label::before {
+  margin: 0;
+}
