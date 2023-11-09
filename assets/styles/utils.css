@@ -1,0 +1,39 @@
+.mt-1 {
+  margin-top: 4px;
+}
+
+.mt-2 {
+  margin-top: 8px;
+}
+
+.mt-4 {
+  margin-top: 16px;
+}
+
+.mt-5 {
+  margin-top: 32px;
+}
+
+.mr-1 {
+  margin-right: 4px;
+}
+
+.mr-2 {
+  margin-right: 8px;
+}
+
+.font-sm {
+  font-size: var(--font-size-small);
+}
+
+.lh-1 {
+  line-height: 16px;
+}
+
+.lh-2 {
+  line-height: 20px;
+}
+
+.lh-3 {
+  line-height: 24px;
+}

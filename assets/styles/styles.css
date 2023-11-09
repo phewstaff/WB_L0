@@ -1,6 +1,8 @@
 @import "globals.css";
 @import "generic.css";
 @import "fonts.css";
+@import "delivery.css";
+@import "utils.css";
 
 @import url("https://fonts.cdnfonts.com/css/segoe-ui-4");
 
@@ -99,18 +101,28 @@ header {
   }
 
   & .mobile-h {
+    padding: 0 13px;
     width: 100%;
     min-height: 56px;
-    gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
     display: flex;
     align-items: center;
 
     & h1 {
       font-family: "Segoe UI Semibold";
-      font-size: 20px;
+      font-size: var(--font-size-lg);
       line-height: 24px;
       padding-bottom: 3px;
+    }
+
+    .header-img-container {
+      width: 28px;
+      height: 28px;
+      display: flex;
+
+      & img {
+        margin: auto;
+      }
     }
   }
 }
@@ -118,14 +130,19 @@ header {
 main {
   width: 100%;
   margin: auto;
-  padding: 12px 16px 0 16px;
+  padding-top: 15px;
+  margin-bottom: var(--height-header-mobile);
   border-radius: var(--border-radius-medium);
   background-color: var(--background-smoky);
 
-  & h2 {
-    font-feature-settings: "liga" 0;
+  .cart-wrapper {
+    padding: 0 16px;
+  }
+
+  & h1 {
     font-weight: var(--font-weight-bolder);
-    font-size: 17px;
+    font-size: 20px;
+    line-height: 28px;
   }
 
   & section {
@@ -135,7 +152,7 @@ main {
   .top-select {
     display: flex;
     justify-content: space-between;
-    padding-top: 13px;
+    padding-top: 16px;
   }
 
   .select-all-input {
@@ -154,6 +171,7 @@ main {
     border-top: solid 1px rgb(0, 0, 0, 0.2);
 
     & h3 {
+      font-family: "Segoe UI Bold";
       display: flex;
       font-size: 16px;
     }
@@ -169,8 +187,8 @@ main {
     }
 
     .item-img-container {
-      width: 80px;
-      height: 106px;
+      min-width: 80px;
+      min-height: 106px;
 
       & img {
         width: 100%;
@@ -242,10 +260,32 @@ main {
     display: flex;
     justify-content: space-between;
     padding-top: 48px;
+    min-height: 24px;
 
     & h2 {
       font-weight: var(--font-weight-regular);
-      font-size: var(--font-size-tiny);
+      font-size: var(--font-size-small);
+    }
+  }
+
+  .form-cards-wrapper {
+    background-color: white;
+    padding: 16px 16px 24px 16px;
+    border-radius: var(--border-radius-card);
+  }
+
+  .text-w-edit {
+    display: flex;
+    justify-content: space-between;
+
+    & button {
+      color: var(--secondary);
+
+      & h1 {
+        padding-top: 2px;
+        line-height: 24px;
+        font-size: var(--font-size-small);
+      }
     }
   }
 }

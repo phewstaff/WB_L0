@@ -1,0 +1,48 @@
+.choose-delivery {
+  & div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .l-spacing {
+    letter-spacing: -0.25px;
+  }
+
+  .annoying {
+    font-family: "Segoe UI Semibold";
+    font-size: var(--font-size-small);
+  }
+
+  .rating-block {
+    justify-content: start;
+
+    & p {
+      font-size: var(--font-size-miniature);
+    }
+  }
+
+  .delivery-time {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+
+    & h3 {
+      font-size: var(--font-size-small);
+      font-family: "Segoe UI Semibold";
+    }
+  }
+
+  .cancel-info {
+    gap: 8px;
+    padding: 0 8px;
+    & h3 {
+      font-size: var(--font-size-miniature);
+
+      & span {
+        cursor: pointer;
+        border-bottom: 1px dashed;
+        color: var(--text-accent);
+      }
+    }
+  }
+}

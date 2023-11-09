@@ -11,34 +11,49 @@ body {
 
 /* Styles for headings */
 h1 {
-  font-size: var(--font-size-huge);
+  font-family: "Segoe UI Bold";
+  font-size: var(--font-size-lg);
   line-height: var(--line-height-huge);
-  font-weight: var(--font-weight-bolder);
 }
 
 h2 {
+  font-family: "Segoe UI Semibold";
   font-size: var(--font-size-huge);
   line-height: var(--line-height-huge);
-  font-weight: var(--font-weight-bold);
 }
 
 h3 {
+  font-family: "Segoe UI Regular";
   font-size: var(--font-size-medium);
   line-height: var(--line-height-big);
-  font-weight: var(--font-weight-bolder);
 }
 
 h4 {
-  letter-spacing: 0.1px;
+  font-family: "Segoe UI Regular";
   font-size: var(--font-size-miniature);
-  font-weight: var(--font-weight-regular);
+}
+
+h5 {
+  font-family: "Segoe UI Light";
+  font-size: var(--font-size-microscopic);
+  line-height: var(--line-height-big);
 }
 
 /* Styles for paragraphs */
 p {
+  font-family: "Segoe UI Regular";
   font-size: var(--font-size-small);
   line-height: var(--line-height-tiny);
-  font-weight: var(--font-weight-regular);
+}
+
+span {
+  font-family: "Segoe UI Light";
+  font-size: var(--font-size-miniature);
+}
+
+button {
+  background: none;
+  border: none;
 }
 
 /* Styles for links */
