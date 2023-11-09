@@ -13,7 +13,10 @@
       <div class="mobile-h">
         <img src="assets/images/vector/icon-28.svg" alt="" />
         <div><h1>ТОВАРЫ И ТОЧКА</h1></div>
-        <img src="assets/images/vector/search-icon.svg" alt="" />
+
+        <div class="header-img-container">
+          <img src="assets/images/vector/search-icon.svg" alt="" />
+        </div>
       </div>
 
       <!------------------------------ NON-MOBILE HEADER ------------------------------>
@@ -50,210 +53,232 @@
     <!-----------------------------------  MAIN ------------------------------>
     <main>
       <section class="cart-section">
-        <h2>Корзина</h2>
+        <div class="cart-wrapper">
+          <h1>Корзина</h1>
 
-        <div class="top-select">
-          <div class="select-all-input">
+          <div class="top-select">
+            <div class="select-all-input">
+              <input
+                name="cssCheckbox"
+                id="demo_opt_1"
+                type="checkbox"
+                class="css-checkbox"
+              />
+              <label for="demo_opt_1">Выбрать все</label>
+            </div>
+
+            <div class="accordion-img-container">
+              <img src="assets/images//vector/arrow.svg" alt="accordion" />
+            </div>
+          </div>
+
+          <div class="card">
             <input
               name="cssCheckbox"
-              id="demo_opt_1"
+              id="demo_opt_2"
               type="checkbox"
-              class="css-checkbox"
+              class="css-checkbox | no-label"
             />
-            <label for="demo_opt_1">Выбрать все</label>
-          </div>
-          <img src="assets/images//vector/arrow.svg" alt="accordion" />
-        </div>
-
-        <div class="card">
-          <input
-            name="cssCheckbox"
-            id="demo_opt_2"
-            type="checkbox"
-            class="css-checkbox | no-label"
-          />
-          <label for="demo_opt_2"></label>
-          <div class="item-content">
-            <div class="item-img-container">
-              <img
-                src="assets/images/raster/shirts-image.png"
-                alt="product-item"
-              />
-            </div>
-
-            <div class="item-text">
-              <div class="price-container">
-                <h3>522 сом</h3>
-                <p class="discount">1051 сом</p>
+            <label for="demo_opt_2"></label>
+            <div class="item-content">
+              <div class="item-img-container">
+                <img
+                  src="assets/images/raster/shirts-image.png"
+                  alt="product-item"
+                />
               </div>
-              <h4>Футболка UZcotton мужская</h4>
-              <p class="color">Цвет: белый</p>
-              <p class="smoky manufacturer">Коледино WB</p>
-            </div>
-          </div>
-        </div>
 
-        <div class="item-actions">
-          <div class="counter">
-            <span>−</span>
-            <p>10</p>
-            <span>+</span>
-          </div>
-
-          <p class="remaining">Осталось 2 шт.</p>
-          <div class="item-buttons">
-            <img src="assets/images/vector/like-icon.svg" alt="like-button" />
-            <img src="assets/images/vector/bin-icon.svg" alt="delete-button" />
-          </div>
-        </div>
-
-        <div class="card">
-          <input
-            name="cssCheckbox"
-            id="demo_opt_2"
-            type="checkbox"
-            class="css-checkbox | no-label"
-          />
-          <label for="demo_opt_2"></label>
-          <div class="item-content">
-            <div class="item-img-container">
-              <img
-                src="assets/images/raster/shirts-image.png"
-                alt="product-item"
-              />
-            </div>
-
-            <div class="item-text">
-              <div class="price-container">
-                <h3>522 сом</h3>
-                <p class="discount">1051 сом</p>
+              <div class="item-text">
+                <div class="price-container">
+                  <h3>522 сом</h3>
+                  <p class="discount">1051 сом</p>
+                </div>
+                <h4>Футболка UZcotton мужская</h4>
+                <p class="color">Цвет: белый</p>
+                <p class="smoky manufacturer">Коледино WB</p>
               </div>
-              <h4>Футболка UZcotton мужская</h4>
-              <p class="color">Цвет: белый</p>
-              <p class="smoky manufacturer">Коледино WB</p>
             </div>
           </div>
-        </div>
 
-        <div class="item-actions">
-          <div class="counter">
-            <span>−</span>
-            <p>10</p>
-            <span>+</span>
-          </div>
+          <div class="item-actions">
+            <div class="counter">
+              <span>−</span>
+              <p>10</p>
+              <span>+</span>
+            </div>
 
-          <p class="remaining">Осталось 2 шт.</p>
-          <div class="item-buttons">
-            <img src="assets/images/vector/like-icon.svg" alt="like-button" />
-            <img src="assets/images/vector/bin-icon.svg" alt="delete-button" />
-          </div>
-        </div>
-
-        <div class="card">
-          <input
-            name="cssCheckbox"
-            id="demo_opt_2"
-            type="checkbox"
-            class="css-checkbox | no-label"
-          />
-          <label for="demo_opt_2"></label>
-          <div class="item-content">
-            <div class="item-img-container">
+            <p class="remaining">Осталось 2 шт.</p>
+            <div class="item-buttons">
+              <img src="assets/images/vector/like-icon.svg" alt="like-button" />
               <img
-                src="assets/images/raster/shirts-image.png"
-                alt="product-item"
+                src="assets/images/vector/bin-icon.svg"
+                alt="delete-button"
               />
             </div>
+          </div>
 
-            <div class="item-text">
-              <div class="price-container">
-                <h3>522 сом</h3>
-                <p class="discount">1051 сом</p>
+          <div class="card">
+            <input
+              name="cssCheckbox"
+              id="demo_opt_2"
+              type="checkbox"
+              class="css-checkbox | no-label"
+            />
+            <label for="demo_opt_2"></label>
+            <div class="item-content">
+              <div class="item-img-container">
+                <img
+                  src="assets/images/raster/shirts-image.png"
+                  alt="product-item"
+                />
               </div>
-              <h4>Футболка UZcotton мужская</h4>
-              <p class="color">Цвет: белый</p>
-              <p class="smoky manufacturer">Коледино WB</p>
+
+              <div class="item-text">
+                <div class="price-container">
+                  <h3>522 сом</h3>
+                  <p class="discount">1051 сом</p>
+                </div>
+                <h4>Футболка UZcotton мужская</h4>
+                <p class="color">Цвет: белый</p>
+                <p class="smoky manufacturer">Коледино WB</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="item-actions">
-          <div class="counter">
-            <span>−</span>
-            <p>10</p>
-            <span>+</span>
-          </div>
+          <div class="item-actions">
+            <div class="counter">
+              <span>−</span>
+              <p>10</p>
+              <span>+</span>
+            </div>
 
-          <p class="remaining">Осталось 2 шт.</p>
-          <div class="item-buttons">
-            <img src="assets/images/vector/like-icon.svg" alt="like-button" />
-            <img src="assets/images/vector/bin-icon.svg" alt="delete-button" />
-          </div>
-        </div>
-
-        <div class="not-available">
-          <h2>Отсутствуют · 3 товара</h2>
-          <img src="assets/images//vector/arrow.svg" alt="accordion" />
-        </div>
-
-        <div class="card">
-          <div class="item-content">
-            <div class="item-img-container grayscaled">
+            <p class="remaining">Осталось 2 шт.</p>
+            <div class="item-buttons">
+              <img src="assets/images/vector/like-icon.svg" alt="like-button" />
               <img
-                src="assets/images/raster/shirts-image.png"
-                alt="product-item"
+                src="assets/images/vector/bin-icon.svg"
+                alt="delete-button"
               />
             </div>
+          </div>
 
-            <div class="item-text">
-              <h4 class="smoky">Футболка UZcotton мужская</h4>
-              <p class="color smoky">Цвет: белый</p>
+          <div class="card">
+            <input
+              name="cssCheckbox"
+              id="demo_opt_2"
+              type="checkbox"
+              class="css-checkbox | no-label"
+            />
+            <label for="demo_opt_2"></label>
+            <div class="item-content">
+              <div class="item-img-container">
+                <img
+                  src="assets/images/raster/shirts-image.png"
+                  alt="product-item"
+                />
+              </div>
+
+              <div class="item-text">
+                <div class="price-container">
+                  <h3>522 сом</h3>
+                  <p class="discount">1051 сом</p>
+                </div>
+                <h4>Футболка UZcotton мужская</h4>
+                <p class="color">Цвет: белый</p>
+                <p class="smoky manufacturer">Коледино WB</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="item-actions">
-          <div class="item-buttons">
-            <img src="assets/images/vector/like-icon.svg" alt="like-button" />
-            <img src="assets/images/vector/bin-icon.svg" alt="delete-button" />
+          <div class="item-actions">
+            <div class="counter">
+              <span>−</span>
+              <p>10</p>
+              <span>+</span>
+            </div>
+
+            <p class="remaining">Осталось 2 шт.</p>
+            <div class="item-buttons">
+              <img src="assets/images/vector/like-icon.svg" alt="like-button" />
+              <img
+                src="assets/images/vector/bin-icon.svg"
+                alt="delete-button"
+              />
+            </div>
+          </div>
+
+          <div class="not-available">
+            <h2>Отсутствуют · 3 товара</h2>
+            <img src="assets/images//vector/arrow.svg" alt="accordion" />
+          </div>
+
+          <div class="card">
+            <div class="item-content">
+              <div class="item-img-container grayscaled">
+                <img
+                  src="assets/images/raster/shirts-image.png"
+                  alt="product-item"
+                />
+              </div>
+
+              <div class="item-text">
+                <h4 class="smoky">Футболка UZcotton мужская</h4>
+                <p class="color smoky">Цвет: белый</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item-actions">
+            <div class="item-buttons">
+              <img src="assets/images/vector/like-icon.svg" alt="like-button" />
+              <img
+                src="assets/images/vector/bin-icon.svg"
+                alt="delete-button"
+              />
+            </div>
           </div>
         </div>
 
         <div class="choose-delivery">
           <div>
-            <h2>Способ доставики</h2>
-            <button class="edit">Изменить</button>
+            <h1 class="l-spacing">Способ доставки</h1>
+
+            <button class="edit">
+              <h1>Изменить</h1>
+            </button>
           </div>
 
-          <h3>Пункт выдачи</h3>
-          <p>Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
+          <h3 class="mt-2">Пункт выдачи</h3>
+          <p class="lh-3">Бишкек, улица Ахматбека Суюмбаева, 12/1</p>
 
-          <div>
-            <img src="" alt="" />
-            <p>4.99</p>
+          <div class="mt-1 rating-block">
+            <img
+              class="mr-1"
+              src="assets/images/vector/rating/rating/star_fill.svg"
+              alt=""
+            />
+            <p class="mr-2">4.99</p>
+
             <p>Ежедневно с 10 до 21</p>
           </div>
-          <h1>СТОООООО</h1>
-          <h2>СТОООООО</h2>
-          <h3></h3>
 
-          <h3>Стоимость доставки</h3>
+          <h3 class="lh-3 mt-4 annoying">Стоимость доставки</h3>
           <p>Бесплатно</p>
 
-          <div class="delivery-time">
+          <div class="delivery-time mt-4">
             <h3>5—6 февраля</h3>
             <div class="small-img-container">
               <img src="assets/images/raster/iphone-image.png" alt="" />
             </div>
           </div>
-        </div>
 
-        <div class="cancel-info">
-          <img src="assets/images/vector/price shipping.svg" alt="" />
-          <h3>
-            Обратная доставка товаров на склад при отказе —
-            <p class="green-underline">бесплатно</p>
-          </h3>
+          <div class="cancel-info">
+            <img src="assets/images/vector/price shipping.svg" alt="" />
+            <h3 class="lh-1">
+              Обратная доставка товаров на склад при отказе —
+              <span class="green-underline">бесплатно</span>
+            </h3>
+          </div>
         </div>
       </section>
 
