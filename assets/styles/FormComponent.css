@@ -19,6 +19,8 @@
   & label {
     position: absolute;
     color: var(--text-smoky);
+    top: 13px;
+    transition: 0.5s cubic-bezier(0.07, 0.79, 0.08, 1.49);
   }
 
   & input {
@@ -31,8 +33,10 @@
     }
   }
 
-  & input:focus + label {
+  & input:focus + label,
+  input:valid + label,
+  input:not(:placeholder-shown) + label {
     top: -5px;
-    transition: 1s;
+    border-color: crimson;
   }
 }
