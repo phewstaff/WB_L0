@@ -1,0 +1,38 @@
+.receiver-form {
+  display: grid;
+  gap: 16px;
+
+  .input-container {
+    display: flex;
+    padding: 13px 0 16px 0;
+    min-height: var(--height-header-mobile);
+    position: relative;
+  }
+
+  & input,
+  label {
+    font-family: "Segoe UI Regular";
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-medium);
+  }
+
+  & label {
+    position: absolute;
+    color: var(--text-smoky);
+  }
+
+  & input {
+    min-width: 100%;
+    border: none;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  & input:focus + label {
+    top: -5px;
+    transition: 1s;
+  }
+}
