@@ -16,6 +16,10 @@
 }
 
 .mt-5 {
+  margin-top: 24px;
+}
+
+.mt-6 {
   margin-top: 32px;
 }
 
@@ -33,6 +37,11 @@
 /* --------------------------------------------------------------------- */
 
 /* Fonts utils */
+
+.font-mini {
+  font-size: var(--font-size-miniature);
+  font-family: "Segoe UI Regular";
+}
 
 .font-sm {
   font-size: var(--font-size-small);

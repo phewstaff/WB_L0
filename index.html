@@ -60,11 +60,11 @@
             <div class="select-all-input">
               <input
                 name="cssCheckbox"
-                id="demo_opt_1"
+                id="select-all"
                 type="checkbox"
                 class="css-checkbox"
               />
-              <label for="demo_opt_1">Выбрать все</label>
+              <label class="font-sm lh-1" for="select-all">Выбрать все</label>
             </div>
 
             <div class="accordion-img-container">
@@ -239,7 +239,7 @@
           </div>
         </div>
 
-        <div class="form-cards-wrapper mt-5">
+        <div class="form-cards-wrapper mt-6">
           <div class="choose-delivery">
             <div class="text-w-edit">
               <h1 class="ls-negative">Способ доставки</h1>
@@ -322,18 +322,22 @@
             <input placeholder="" required id="name" type="text" />
             <label for="name">Имя</label>
           </div>
+
           <div class="input-container">
             <input placeholder="" required id="surname" type="text" />
             <label for="surname">Фамилия</label>
           </div>
+
           <div class="input-container">
             <input placeholder="" required id="email" type="email" />
             <label for="email">Электронная почта</label>
           </div>
+
           <div class="input-container">
             <input placeholder="" required id="number" type="text" />
             <label for="number">Телефон</label>
           </div>
+
           <div class="input-container">
             <input placeholder="" required id="INN" type="text" />
             <label for="INN">ИНН</label>
@@ -341,17 +345,84 @@
         </form>
       </div>
 
-      <section class="total-bill-section">Bill</section>
+      <section class="total-bill-section mt-4">
+        <div class="text-w-edit">
+          <h1 class="ls-negative">Итого</h1>
+          <h1 class="ls-negative">2 101 063 сом</h1>
+        </div>
+
+        <div class="text-w-edit mt-2">
+          <h3>203 товара</h3>
+          <h3>2 302 048 сом</h3>
+        </div>
+
+        <div class="text-w-edit">
+          <h3>Скидка</h3>
+          <h3>−200 985 сом</h3>
+        </div>
+
+        <div class="text-w-edit">
+          <h3>Доставка</h3>
+          <h3>Бесплатно</h3>
+        </div>
+
+        <div class="cancel-info mt-4">
+          <img
+            src="assets/images/vector/price shipping.svg"
+            alt="product-item"
+          />
+          <h3 class="lh-1">
+            Обратная доставка товаров на склад при отказе —
+            <span class="green-underline">бесплатно</span>
+          </h3>
+        </div>
+
+        <div class="cancel-info mt-4">
+          <div>
+            <input
+              name="quickWithdrawal"
+              id="quickWithdrawal"
+              type="checkbox"
+              class="css-checkbox"
+            />
+
+            <label class="lh-1 font-mini" for="quickWithdrawal"
+              >Списать оплату сразу</label
+            >
+
+            <p class="font-mini lh-1 mt-2">
+              Спишем оплату с карты при получении
+            </p>
+          </div>
+        </div>
+
+        <button class="primary-button mt-5">Заказать</button>
+
+        <div class="user-agreement flex">
+          <img
+            class="mr-2"
+            src="assets/images/vector/Frame 277132151.svg"
+            alt=""
+          />
+
+          <p class="font-mini lh-1 mt-2">
+            Соглашаюсь <a>с правилами пользования торговой площадкой</a> и
+            <a>возврата</a>
+          </p>
+        </div>
+      </section>
 
       <!------------------------------ NON-MOBILE HEADER ------------------------------>
     </main>
 
     <footer>
-      <div class="big-screen-f"></div>
+      <div class="footer-text-container">
+        <p class="footer-paragragh font-mini lh-1">
+          © 2022 ООО «Товары и точка»
+        </p>
+      </div>
 
       <div class="mobile-f">
-        <section></section>
-
         <nav>
           <ul>
             <li><img src="assets/images/vector/home.svg" alt="" /></li>

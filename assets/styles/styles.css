@@ -1,9 +1,10 @@
 @import "globals.css";
 @import "generic.css";
+@import "utils.css";
 @import "fonts.css";
 @import "delivery.css";
-@import "utils.css";
 @import "FormComponent.css";
+@import "TotalBillComponent.css";
 
 @import url("https://fonts.cdnfonts.com/css/segoe-ui-4");
 
@@ -38,6 +39,17 @@ hr.divider {
 .checkbox {
   width: 22px;
   height: 22px;
+}
+
+.primary-button {
+  font-family: "Segoe UI Bold";
+  min-width: 100%;
+  min-height: 44px;
+  color: var(--text-white);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-medium);
+  background-color: var(--secondary);
+  border-radius: var(--border-primary);
 }
 
 body {
@@ -133,7 +145,8 @@ main {
   width: 100%;
   margin: auto;
   padding-top: 15px;
-  margin-bottom: var(--height-header-mobile);
+  padding-bottom: 40px;
+
   border-radius: var(--border-radius-medium);
   background-color: var(--background-smoky);
 
@@ -155,14 +168,9 @@ main {
     display: flex;
     justify-content: space-between;
     padding-top: 16px;
-  }
 
-  .select-all-input {
-    display: flex;
-    align-items: center;
-
-    & label {
-      letter-spacing: 0.05rem;
+    .css-checkbox + label::before {
+      margin-right: 11px;
     }
   }
 
@@ -290,10 +298,37 @@ main {
       }
     }
   }
+
+  .cancel-info {
+    display: flex;
+    gap: 8px;
+    padding: 0 8px;
+
+    & h3 {
+      font-size: var(--font-size-miniature);
+
+      & span {
+        cursor: pointer;
+        border-bottom: 1px dashed;
+        color: var(--text-accent);
+      }
+    }
+  }
 }
 /* ---------------------------------------------------------------------------------------------------- */
 
 footer {
+  text-align: center;
+  margin-bottom: var(--height-header-mobile);
+
+  .footer-text-container {
+    padding: 24px;
+  }
+
+  .footer-paragragh {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
   & nav {
     position: fixed;
     bottom: 0;

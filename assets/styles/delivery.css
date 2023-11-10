@@ -31,18 +31,4 @@
       font-family: "Segoe UI Semibold";
     }
   }
-
-  .cancel-info {
-    gap: 8px;
-    padding: 0 8px;
-    & h3 {
-      font-size: var(--font-size-miniature);
-
-      & span {
-        cursor: pointer;
-        border-bottom: 1px dashed;
-        color: var(--text-accent);
-      }
-    }
-  }
 }

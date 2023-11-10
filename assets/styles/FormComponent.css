@@ -37,6 +37,5 @@
   input:valid + label,
   input:not(:placeholder-shown) + label {
     top: -5px;
-    border-color: crimson;
   }
 }

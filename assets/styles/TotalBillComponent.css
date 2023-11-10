@@ -1,0 +1,13 @@
+.total-bill-section {
+  padding: 0 16px;
+
+  .cancel-info {
+    padding: 8px 8px 12px 8px;
+    background-color: var(--smoky-dark);
+    border-radius: var(--border-primary);
+  }
+
+  & a {
+    text-decoration: underline rgba(0, 0, 0, 0.1);
+  }
+}
