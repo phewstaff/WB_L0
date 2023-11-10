@@ -1,9 +1,14 @@
+/* Margins */
+
 .mt-1 {
   margin-top: 4px;
 }
 
 .mt-2 {
   margin-top: 8px;
+}
+.mt-3 {
+  margin-top: 12px;
 }
 
 .mt-4 {
@@ -21,6 +26,13 @@
 .mr-2 {
   margin-right: 8px;
 }
+.mr-3 {
+  margin-right: 12px;
+}
+
+/* --------------------------------------------------------------------- */
+
+/* Fonts utils */
 
 .font-sm {
   font-size: var(--font-size-small);
@@ -37,3 +49,17 @@
 .lh-3 {
   line-height: 24px;
 }
+
+.ls-negative {
+  letter-spacing: -0.25px;
+}
+
+/* --------------------------------------------------------------------- */
+
+/* Layout */
+
+.flex {
+  display: flex;
+}
+
+/* --------------------------------------------------------------------- */

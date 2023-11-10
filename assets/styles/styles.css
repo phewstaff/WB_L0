@@ -3,6 +3,7 @@
 @import "fonts.css";
 @import "delivery.css";
 @import "utils.css";
+@import "FormComponent.css";
 
 @import url("https://fonts.cdnfonts.com/css/segoe-ui-4");
 
@@ -12,9 +13,10 @@
   box-sizing: border-box;
 }
 
-.discount,
-.smoky {
+.smoky-little {
   color: var(--text-smoky);
+  font-size: var(--font-size-miniature);
+  line-height: var(--line-height-tiny);
 }
 
 a {
@@ -177,7 +179,7 @@ main {
     }
 
     & p {
-      font-size: var(--font-size-microscopic);
+      font-size: var(--font-size-miniature);
     }
 
     .item-content {

@@ -24,8 +24,8 @@ h2 {
 
 h3 {
   font-family: "Segoe UI Regular";
-  font-size: var(--font-size-medium);
-  line-height: var(--line-height-big);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-medium);
 }
 
 h4 {
