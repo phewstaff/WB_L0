@@ -67,7 +67,6 @@ body {
 header {
   color: var(--text-white);
   font-weight: var(--font-weight-bold);
-  letter-spacing: 0.15rem;
 
   & button {
     width: 20px;
@@ -144,6 +143,10 @@ header {
         margin: auto;
       }
     }
+  }
+
+  .p-weird {
+    padding-right: 17px;
   }
 }
 /* ---------------------------------------------------------------------------------------------------- */
@@ -354,25 +357,52 @@ footer {
 @media (min-width: 1024px) {
   header {
     & h1 {
-      padding: 0 32px 0 15px;
-      font-weight: var(--font-weight-bold);
-      line-height: var(--line-height-medium);
-      letter-spacing: 0.05rem;
+      min-width: 107px;
+    }
+
+    .flex {
+      gap: 16px;
     }
 
     .burger-icon-container {
+      align-self: center;
+      min-width: 48px;
+      min-height: 48px;
+      padding: 12px 10px;
       display: flex;
       justify-content: center;
-      min-height: 48px;
-      min-width: 48px;
       border-radius: var(--border-primary);
-      border: rgb(255, 255, 255, 0.45) solid;
+      border: 1px rgb(255, 255, 255, 0.45) solid;
+
+      & img {
+        max-height: 100%;
+      }
+    }
+
+    & .mobile-h {
+      display: none;
+    }
+
+    & .big-screen-h {
+      display: flex;
+      padding: 16px 3px 16px 24px;
+      align-items: center;
+      gap: 32px;
+      width: 100%;
+
+      .title {
+        font-family: "Segoe UI Semibold";
+        font-size: 28px;
+        line-height: 24px; /* 85.714% */
+        font-variant: all-small-caps;
+        letter-spacing: 0.13em;
+      }
     }
   }
 
   main {
     display: grid;
-    padding: 0 24px;
+    padding: 0 22px;
     grid-template-columns: 1fr minmax(303px, 303px);
 
     .form-cards-wrapper {
@@ -395,27 +425,6 @@ footer {
 
     & div {
       height: 32px;
-    }
-
-    & h3 {
-      font-weight: var(--font-weight-regular);
-      font-size: var(--font-size-microscopic);
-      line-height: var(--line-height-small);
-      letter-spacing: 0.02rem;
-    }
-  }
-
-  header {
-    & .mobile-h {
-      display: none;
-    }
-
-    & .big-screen-h {
-      display: flex;
-      width: 100%;
-      min-height: 88px;
-      align-items: center;
-      padding: 0 20px 0 24px;
     }
   }
 
