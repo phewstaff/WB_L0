@@ -52,6 +52,12 @@ hr.divider {
   border-radius: var(--border-primary);
 }
 
+.instant-withdrawal {
+  & p {
+    margin-top: 5px;
+  }
+}
+
 body {
   font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif;
   min-height: 100dvh;
@@ -350,7 +356,6 @@ footer {
     & h1 {
       padding: 0 32px 0 15px;
       font-weight: var(--font-weight-bold);
-      font-size: var(--font-size-big);
       line-height: var(--line-height-medium);
       letter-spacing: 0.05rem;
     }
@@ -362,6 +367,21 @@ footer {
       min-width: 48px;
       border-radius: var(--border-primary);
       border: rgb(255, 255, 255, 0.45) solid;
+    }
+  }
+
+  main {
+    display: grid;
+    padding: 0 24px;
+    grid-template-columns: 1fr minmax(303px, 303px);
+
+    .form-cards-wrapper {
+      grid-column: 1;
+    }
+
+    .cart-wrapper {
+      padding: 0;
+      padding-right: 32px;
     }
   }
 
