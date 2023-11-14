@@ -1,0 +1,168 @@
+.card {
+  position: relative;
+  padding-top: 12px;
+  padding-bottom: 16px;
+  border-top: solid 1px rgb(0, 0, 0, 0.2);
+
+  & h3 {
+    font-family: "Segoe UI Bold";
+    display: flex;
+    font-size: 16px;
+  }
+
+  .item-content {
+    display: flex;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .item-img-container {
+    min-width: 80px;
+    min-height: 106px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .color {
+    padding-top: 5px;
+  }
+
+  .item-text {
+    & h4 {
+      font-size: var(--font-size-tiny);
+    }
+  }
+
+  .price-container {
+    display: flex;
+    gap: 5px;
+    align-items: flex-end;
+    margin-bottom: 2px;
+  }
+
+  .discount {
+    text-decoration: line-through;
+    border-bottom: 1px dashed;
+  }
+
+  .css-checkbox + label {
+    position: absolute;
+    top: 17px;
+    left: 5px;
+  }
+}
+
+.item-actions {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+
+  & div {
+    display: flex;
+  }
+
+  .counter {
+    min-width: 80px;
+    min-height: 32px;
+    border-radius: 4px;
+    background-color: white;
+    justify-content: space-between;
+    padding: 0 9px 0 10px;
+    align-items: center;
+
+    & span {
+      font-size: 20px;
+      letter-spacing: -0.2px;
+    }
+  }
+
+  .item-buttons {
+    gap: 28px;
+    margin-left: auto;
+  }
+
+  .remaining {
+    padding-left: 16px;
+    color: var(--accent);
+    font-size: var(--font-size-miniature);
+  }
+}
+
+.not-available {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 48px;
+  min-height: 24px;
+
+  & h2 {
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-small);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: flex-start;
+
+    .css-checkbox + label {
+      position: static;
+    }
+
+    .item-img-container {
+      min-width: 72px;
+      min-height: 96px;
+      width: 72px;
+      height: 96px;
+    }
+  }
+
+  .item-text {
+    width: 275px;
+  }
+
+  .item-actions {
+    align-self: flex-start;
+    margin-left: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .remaining {
+      padding-left: 0;
+    }
+  }
+
+  .price-container {
+    margin-left: 44px;
+    flex-direction: column;
+    align-self: flex-start;
+
+    & h3 {
+      margin-left: auto;
+      font-size: 20px;
+    }
+
+    .flex {
+      gap: 6px;
+    }
+
+    .currency {
+      font-size: var(--font-size-small);
+    }
+
+    & p {
+      margin-left: auto;
+    }
+  }
+
+  .counter {
+    width: 100px;
+    height: 44px;
+  }
+}

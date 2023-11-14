@@ -1,10 +1,12 @@
 @import "globals.css";
 @import "generic.css";
-@import "utils.css";
 @import "fonts.css";
 @import "delivery.css";
+@import "HeaderComponent.css";
 @import "FormComponent.css";
 @import "TotalBillComponent.css";
+@import "CardComponent.css";
+@import "utils.css";
 
 @import url("https://fonts.cdnfonts.com/css/segoe-ui-4");
 
@@ -12,6 +14,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 100dvh;
+  background-color: var(--background);
 }
 
 .smoky-little {
@@ -58,99 +66,6 @@ hr.divider {
   }
 }
 
-body {
-  font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif;
-  min-height: 100dvh;
-  background-color: var(--background);
-}
-
-header {
-  color: var(--text-white);
-  font-weight: var(--font-weight-bold);
-
-  & button {
-    width: 20px;
-    border: 1px solid transparent;
-    border-radius: inherit;
-    background: url("/assets/images/vector/search-icon.svg") no-repeat center;
-    opacity: 0.5;
-    cursor: pointer;
-  }
-
-  & form {
-    display: flex;
-    width: 100%;
-    min-height: 48px;
-    padding: 0 20px;
-    border-radius: var(--border-radius-big);
-    background: rgb(255, 255, 255, 0.2);
-
-    & input {
-      width: 100%;
-      display: flex;
-      padding: 2px;
-      background: none;
-      border: none;
-      color: white;
-
-      &::placeholder {
-        font-size: var(--font-size-medium);
-        font-family: "Segoe UI Regular";
-        color: white;
-        opacity: 0.5;
-      }
-
-      &:focus {
-        outline: none;
-        border: none;
-        color: white;
-      }
-
-      &::-webkit-search-cancel-button {
-        -webkit-appearance: none;
-        min-height: 24px;
-        width: 24px;
-        margin-left: 0.4em;
-        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
-        cursor: pointer;
-      }
-    }
-  }
-
-  & .big-screen-h {
-    display: none;
-  }
-
-  & .mobile-h {
-    padding: 0 13px;
-    width: 100%;
-    min-height: 56px;
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-
-    & h1 {
-      font-family: "Segoe UI Semibold";
-      font-size: var(--font-size-lg);
-      line-height: 24px;
-      padding-bottom: 3px;
-    }
-
-    .header-img-container {
-      width: 28px;
-      height: 28px;
-      display: flex;
-
-      & img {
-        margin: auto;
-      }
-    }
-  }
-
-  .p-weird {
-    padding-right: 17px;
-  }
-}
 /* ---------------------------------------------------------------------------------------------------- */
 main {
   width: 100%;
@@ -178,114 +93,10 @@ main {
   .top-select {
     display: flex;
     justify-content: space-between;
-    padding-top: 16px;
+    padding: 16px 0 14px 0;
 
     .css-checkbox + label::before {
       margin-right: 11px;
-    }
-  }
-
-  .card {
-    position: relative;
-    margin-top: 16px;
-    padding-top: 12px;
-    border-top: solid 1px rgb(0, 0, 0, 0.2);
-
-    & h3 {
-      font-family: "Segoe UI Bold";
-      display: flex;
-      font-size: 16px;
-    }
-
-    & p {
-      font-size: var(--font-size-miniature);
-    }
-
-    .item-content {
-      display: flex;
-      gap: 16px;
-      align-items: start;
-    }
-
-    .item-img-container {
-      min-width: 80px;
-      min-height: 106px;
-
-      & img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .color {
-      padding-top: 5px;
-    }
-
-    .price-container {
-      display: flex;
-      gap: 5px;
-      align-items: center;
-    }
-
-    .discount {
-      text-decoration: line-through;
-      border-bottom: 1px dashed;
-    }
-
-    .manufacturer {
-      margin-top: 10px;
-    }
-
-    .css-checkbox + label {
-      position: absolute;
-      top: 17px;
-      left: 5px;
-    }
-  }
-
-  .item-actions {
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
-
-    & div {
-      display: flex;
-    }
-    .counter {
-      min-width: 80px;
-      min-height: 32px;
-      border-radius: 4px;
-      background-color: white;
-      justify-content: space-between;
-      padding: 0 9px;
-      align-items: center;
-
-      & span:last-child {
-        font-size: larger;
-      }
-    }
-
-    .item-buttons {
-      gap: 24px;
-      margin-left: auto;
-    }
-
-    .remaining {
-      padding-left: 16px;
-      color: var(--accent);
-      font-size: var(--font-size-microscopic);
-    }
-  }
-
-  .not-available {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 48px;
-    min-height: 24px;
-
-    & h2 {
-      font-weight: var(--font-weight-regular);
-      font-size: var(--font-size-small);
     }
   }
 
@@ -357,62 +168,9 @@ footer {
 }
 
 @media (min-width: 1024px) {
-  header {
-    display: flex;
-    align-items: center;
-    min-height: 88px;
-
-    & h1 {
-      min-width: 109px;
-      margin-right: 16px;
-      padding-bottom: 8px;
-    }
-
-    .flex {
-      gap: 16px;
-      align-items: center;
-    }
-
-    .burger-icon-container {
-      min-width: 48px;
-      max-height: 48px;
-      padding: 12px 10px;
-      display: flex;
-      justify-content: center;
-      border-radius: var(--border-primary);
-      border: 1px rgb(255, 255, 255, 0.45) solid;
-
-      & img {
-        height: 100%;
-        width: 100%;
-      }
-    }
-
-    & .mobile-h {
-      display: none;
-    }
-
-    & .big-screen-h {
-      display: flex;
-      padding: 16px 3px 16px 24px;
-      align-items: center;
-      gap: 12px;
-      width: 100%;
-      max-height: 56px;
-
-      .title {
-        font-family: "Segoe UI Semibold";
-        font-size: 29px;
-        line-height: 24px; /* 85.714% */
-        font-variant: all-small-caps;
-        letter-spacing: 0.1em;
-      }
-    }
-  }
-
   main {
     display: grid;
-    padding: 0 22px;
+    padding: 0 24px;
     grid-template-columns: 1fr minmax(303px, 303px);
 
     .form-cards-wrapper {
@@ -421,7 +179,20 @@ footer {
 
     .cart-wrapper {
       padding: 0;
+      padding-top: 34px;
       padding-right: 32px;
+
+      & h1 {
+        font-size: var(--font-size-huge);
+        line-height: var(--line-height-huge);
+      }
+    }
+
+    .top-select {
+      padding-top: 27px;
+      .css-checkbox + label::before {
+        margin-right: 11px;
+      }
     }
   }
 

@@ -1,4 +1,12 @@
+/* Paddings */
+.p-0 {
+  padding: 0px;
+}
 /* Margins */
+
+.m-0 {
+  margin: 0px;
+}
 
 .mt-1 {
   margin-top: 4px;
@@ -31,6 +39,7 @@
 .mr-2 {
   margin-right: 8px;
 }
+
 .mr-3 {
   margin-right: 12px;
 }
@@ -41,6 +50,11 @@
 
 .font-mini {
   font-size: var(--font-size-miniature);
+  font-family: "Segoe UI Regular";
+}
+
+.font-tiny {
+  font-size: var(--font-size-tiny);
   font-family: "Segoe UI Regular";
 }
 
@@ -81,11 +95,15 @@
     font-size: var(--font-size-lg);
     line-height: var(--line-height-huge);
   }
+
+  .md-hidden {
+    display: none !important;
+  }
 }
 
 @media (max-width: 320px) {
   .sm-hidden {
-    display: none;
+    display: none !important;
   }
 }
 
