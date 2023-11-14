@@ -22,6 +22,27 @@ body {
   background-color: var(--background);
 }
 
+#card-container {
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 500px; /* Set a reasonable max-height */
+}
+
+/* Hide the cards by default */
+#card-container.cards-hidden {
+  max-height: 0;
+}
+
+/* Add rotation animation to the arrow image */
+.accordion-img-container img {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Add rotation class to rotate the arrow */
+.accordion-img-container.rotate-arrow img {
+  transform: rotate(180deg);
+}
+
 .smoky-little {
   color: var(--text-smoky);
   font-size: var(--font-size-miniature);
@@ -64,6 +85,14 @@ hr.divider {
   & p {
     margin-top: 5px;
   }
+}
+
+.with-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ---------------------------------------------------------------------------------------------------- */
@@ -168,6 +197,10 @@ footer {
 }
 
 @media (min-width: 1024px) {
+  .with-clamp-2 {
+    all: unset;
+  }
+
   main {
     display: grid;
     padding: 0 24px;

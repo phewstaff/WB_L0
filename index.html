@@ -71,180 +71,69 @@
               <label class="font-sm lh-1" for="select-all">Выбрать все</label>
             </div>
 
-            <div class="accordion-img-container">
+            <div class="accordion-img-container accordion-active">
               <img src="assets/images//vector/arrow.svg" alt="accordion" />
             </div>
           </div>
 
-          <div class="card">
-            <input
-              name="cssCheckbox"
-              id="demo_opt_2"
-              type="checkbox"
-              class="css-checkbox | no-label"
-            />
-            <label for="demo_opt_2"></label>
-            <div class="item-content">
-              <div class="item-img-container">
-                <img
-                  src="assets/images/raster/shirts-image.png"
-                  alt="product-item"
-                />
-              </div>
-
-              <div class="item-text">
-                <div class="price-container md-hidden">
-                  <h3>522 сом</h3>
-                  <p class="discount smoky-little">1051 сом</p>
+          <div id="card-template" style="display: none">
+            <div class="card">
+              <input
+                name="cssCheckbox"
+                id="item-checkbox"
+                type="checkbox"
+                class="css-checkbox | no-label"
+              />
+              <label for="item-checkbox"></label>
+              <div class="item-content">
+                <div class="item-img-container">
+                  <img id="item-image" src="" alt="product-item" />
                 </div>
-                <h4 class="lh-2">Футболка UZcotton мужская</h4>
-                <p class="mt-2 font-mini">Цвет: белый</p>
-                <p class="smoky-little font-sm mt-2">Коледино WB</p>
-              </div>
-            </div>
 
-            <div class="item-actions mt-2">
-              <div class="counter">
-                <span class="lh-2">−</span>
-                <p class="font-tiny">1</p>
-                <span class="lh-2">+</span>
-              </div>
-
-              <p class="remaining">Осталось 2 шт.</p>
-              <div class="item-buttons mr-3">
-                <img
-                  src="assets/images/vector/like-icon.svg"
-                  alt="like-button"
-                />
-                <img
-                  src="assets/images/vector/bin-icon.svg"
-                  alt="delete-button"
-                />
-              </div>
-            </div>
-
-            <div class="price-container sm-hidden">
-              <div class="flex">
-                <h3>522</h3>
-                <h3 class="currency">сом</h3>
+                <div class="item-text">
+                  <div class="price-container md-hidden">
+                    <h3 id="price-md"></h3>
+                    <p id="discount-md" class="discount smoky-little"></p>
+                  </div>
+                  <h4 id="item-name" class="lh-2 with-clamp-2"></h4>
+                  <p id="item-color" class="mt-2 font-mini"></p>
+                  <p id="item-brand" class="smoky-little font-sm mt-2"></p>
+                </div>
               </div>
 
-              <p class="discount smoky-little">1051 сом</p>
+              <div class="item-actions mt-2">
+                <div class="counter">
+                  <span class="lh-2">−</span>
+                  <p class="font-tiny"></p>
+                  <span class="lh-2">+</span>
+                </div>
+
+                <p id="remaining" class="remaining"></p>
+                <div class="item-buttons mr-3">
+                  <img
+                    src="assets/images/vector/like-icon.svg"
+                    alt="like-button"
+                  />
+                  <img
+                    src="assets/images/vector/bin-icon.svg"
+                    alt="delete-button"
+                  />
+                </div>
+              </div>
+
+              <div class="price-container sm-hidden">
+                <div class="flex">
+                  <h3 id="price-sm"></h3>
+                  <h3 id="currency" class="currency">сом</h3>
+                </div>
+
+                <p id="discount-sm" class="discount smoky-little"></p>
+              </div>
             </div>
           </div>
 
-          <div class="card">
-            <input
-              name="cssCheckbox"
-              id="demo_opt_2"
-              type="checkbox"
-              class="css-checkbox | no-label"
-            />
-            <label for="demo_opt_2"></label>
-            <div class="item-content">
-              <div class="item-img-container">
-                <img
-                  src="assets/images/raster/iphone-image.png"
-                  alt="product-item"
-                />
-              </div>
-
-              <div class="item-text">
-                <div class="price-container md-hidden">
-                  <h3>2 100 047 сом</h3>
-                  <p class="discount smoky-little">2 300 047 сом</p>
-                </div>
-
-                <h4 class="lh-2">
-                  Силиконовый чехол картхолдер (отверстия) для...
-                </h4>
-                <p class="mt-2 font-mini">Цвет: прозрачный</p>
-                <p class="smoky-little manufacturer font-sm mt-2">
-                  Коледино WB
-                </p>
-              </div>
-            </div>
-
-            <div class="item-actions mt-2">
-              <div class="counter">
-                <span class="lh-2">−</span>
-                <p class="font-tiny">1</p>
-                <span class="lh-2">+</span>
-              </div>
-
-              <p class="remaining text-center">Осталось 2 шт.</p>
-              <div class="item-buttons mr-3">
-                <img
-                  src="assets/images/vector/like-icon.svg"
-                  alt="like-button"
-                />
-                <img
-                  src="assets/images/vector/bin-icon.svg"
-                  alt="delete-button"
-                />
-              </div>
-            </div>
-
-            <div class="price-container sm-hidden">
-              <h3>522 сом</h3>
-              <p class="discount smoky-little">1051 сом</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <input
-              name="cssCheckbox"
-              id="demo_opt_2"
-              type="checkbox"
-              class="css-checkbox | no-label"
-            />
-            <label for="demo_opt_2"></label>
-            <div class="item-content">
-              <div class="item-img-container">
-                <img
-                  src="assets/images/raster/shirts-image.png"
-                  alt="product-item"
-                />
-              </div>
-
-              <div class="item-text">
-                <div class="price-container md-hidden">
-                  <h3>522 сом</h3>
-                  <p class="discount smoky-little">1051 сом</p>
-                </div>
-                <h4 class="lh-2">Футболка UZcotton мужская</h4>
-                <p class="mt-2 font-sm">Цвет: белый</p>
-                <p class="smoky-little manufacturer font-sm mt-2">
-                  Коледино WB
-                </p>
-              </div>
-            </div>
-
-            <div class="item-actions mt-2">
-              <div class="counter">
-                <span class="lh-2">−</span>
-                <p class="font-tiny">1</p>
-                <span class="lh-2">+</span>
-              </div>
-
-              <p class="remaining text-center">Осталось 2 шт.</p>
-              <div class="item-buttons">
-                <img
-                  src="assets/images/vector/like-icon.svg"
-                  alt="like-button"
-                />
-                <img
-                  src="assets/images/vector/bin-icon.svg"
-                  alt="delete-button"
-                />
-              </div>
-            </div>
-
-            <div class="price-container sm-hidden">
-              <h3>522 сом</h3>
-              <p class="discount smoky-little">1051 сом</p>
-            </div>
-          </div>
+          <!-- Container to hold the rendered cards -->
+          <div id="card-container"></div>
 
           <div class="not-available">
             <h2>Отсутствуют · 3 товара</h2>

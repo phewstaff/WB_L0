@@ -139,13 +139,13 @@
   }
 
   .price-container {
-    margin-left: 44px;
+    min-width: 110px;
     flex-direction: column;
     align-self: flex-start;
 
     & h3 {
-      margin-left: auto;
       font-size: 20px;
+      /* font-size: calc(0.7vw + 0.5vh + 1vmin); */
     }
 
     .flex {
