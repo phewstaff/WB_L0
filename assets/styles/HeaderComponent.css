@@ -1,0 +1,144 @@
+header {
+  color: var(--text-white);
+  font-weight: var(--font-weight-bold);
+
+  & button {
+    width: 20px;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    background: url("/assets/images/vector/search-icon.svg") no-repeat center;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  & form {
+    display: flex;
+    width: 100%;
+    min-height: 48px;
+    padding: 0 20px;
+    border-radius: var(--border-radius-big);
+    background: rgb(255, 255, 255, 0.2);
+
+    & input {
+      width: 100%;
+      display: flex;
+      padding: 2px;
+      background: none;
+      border: none;
+      color: white;
+
+      &::placeholder {
+        font-size: var(--font-size-medium);
+        font-family: "Segoe UI Regular";
+        color: white;
+        opacity: 0.5;
+      }
+
+      &:focus {
+        outline: none;
+        border: none;
+        color: white;
+      }
+
+      &::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        min-height: 24px;
+        width: 24px;
+        margin-left: 0.4em;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
+        cursor: pointer;
+      }
+    }
+  }
+
+  & .big-screen-h {
+    display: none;
+  }
+
+  & .mobile-h {
+    padding: 0 13px;
+    width: 100%;
+    min-height: 56px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+    & h1 {
+      font-family: "Segoe UI Semibold";
+      font-size: var(--font-size-huge);
+      line-height: 24px;
+      padding-bottom: 10px;
+      letter-spacing: 2.52px;
+      font-variant: all-small-caps;
+    }
+
+    .header-img-container {
+      width: 28px;
+      height: 28px;
+      display: flex;
+
+      & img {
+        margin: auto;
+      }
+    }
+  }
+
+  .p-weird {
+    padding-right: 17px;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    align-items: center;
+    min-height: 88px;
+
+    & h1 {
+      min-width: 109px;
+      margin-right: 16px;
+      padding-bottom: 8px;
+    }
+
+    .flex {
+      gap: 16px;
+      align-items: center;
+    }
+
+    .burger-icon-container {
+      min-width: 48px;
+      max-height: 48px;
+      padding: 12px 10px;
+      display: flex;
+      justify-content: center;
+      border-radius: var(--border-primary);
+      border: 1px rgb(255, 255, 255, 0.45) solid;
+
+      & img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    & .mobile-h {
+      display: none;
+    }
+
+    & .big-screen-h {
+      display: flex;
+      padding: 16px 3px 16px 24px;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      max-height: 56px;
+
+      .title {
+        font-family: "Segoe UI Semibold";
+        font-size: 29px;
+        line-height: 24px; /* 85.714% */
+        font-variant: all-small-caps;
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+}

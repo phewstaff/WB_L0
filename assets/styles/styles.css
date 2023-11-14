@@ -175,6 +175,8 @@ footer {
 
     .form-cards-wrapper {
       grid-column: 1;
+      padding: 16px 24px 24px 24px;
+      max-width: 638px;
     }
 
     .cart-wrapper {
@@ -192,6 +194,19 @@ footer {
       padding-top: 27px;
       .css-checkbox + label::before {
         margin-right: 11px;
+      }
+    }
+
+    .text-w-edit {
+      & button {
+        & h1 {
+          line-height: var(--line-height-big);
+        }
+      }
+
+      .forms-title {
+        font-size: var(--font-size-lg);
+        line-height: var(--line-height-big);
       }
     }
   }

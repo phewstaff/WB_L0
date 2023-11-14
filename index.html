@@ -281,7 +281,7 @@
         <div class="form-cards-wrapper mt-6">
           <div class="choose-delivery">
             <div class="text-w-edit">
-              <h1 class="ls-negative">Способ доставки</h1>
+              <h1 class="forms-title ls-negative">Способ доставки</h1>
 
               <button class="edit">
                 <h1>Изменить</h1>
@@ -330,7 +330,7 @@
 
         <div class="form-cards-wrapper mt-3">
           <div class="text-w-edit">
-            <h1 class="ls-negative">Способ оплаты</h1>
+            <h1 class="forms-title ls-negative">Способ оплаты</h1>
 
             <button class="edit">
               <h1>Изменить</h1>
@@ -353,33 +353,37 @@
 
       <div class="form-cards-wrapper mt-3">
         <div class="text-w-edit">
-          <h1 class="ls-negative">Получатель</h1>
+          <h1 class="forms-title ls-negative">Получатель</h1>
         </div>
 
         <form action="" class="receiver-form mt-2">
-          <div class="input-container">
-            <input placeholder=" " required id="name" type="text" />
-            <label for="name">Имя</label>
+          <div class="first-row">
+            <div class="input-container">
+              <input placeholder=" " required id="name" type="text" />
+              <label for="name">Имя</label>
+            </div>
+
+            <div class="input-container">
+              <input placeholder=" " required id="surname" type="text" />
+              <label for="surname">Фамилия</label>
+            </div>
           </div>
 
-          <div class="input-container">
-            <input placeholder=" " required id="surname" type="text" />
-            <label for="surname">Фамилия</label>
-          </div>
+          <div class="second-row">
+            <div class="input-container">
+              <input placeholder=" " required id="email" type="email" />
+              <label for="email">Почта</label>
+            </div>
 
-          <div class="input-container">
-            <input placeholder=" " required id="email" type="email" />
-            <label for="email">Электронная почта</label>
-          </div>
+            <div class="input-container">
+              <input placeholder=" " required id="number" type="text" />
+              <label for="number">Телефон</label>
+            </div>
 
-          <div class="input-container">
-            <input placeholder=" " required id="number" type="text" />
-            <label for="number">Телефон</label>
-          </div>
-
-          <div class="input-container">
-            <input placeholder=" " required id="INN" type="text" />
-            <label for="INN">ИНН</label>
+            <div class="input-container">
+              <input placeholder=" " required id="INN" type="text" />
+              <label for="INN">ИНН</label>
+            </div>
           </div>
         </form>
       </div>
