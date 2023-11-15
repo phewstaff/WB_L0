@@ -54,7 +54,6 @@
         </nav>
       </div>
     </header>
-    <!-----------------------------------  MAIN ------------------------------>
     <main>
       <section class="cart-section">
         <div class="cart-wrapper">
@@ -79,6 +78,7 @@
           <div id="card-template" style="display: none">
             <div class="card">
               <input
+                name="card-item-checkbox"
                 name="cssCheckbox"
                 id="item-checkbox"
                 type="checkbox"
@@ -104,7 +104,7 @@
               <div class="item-actions mt-2">
                 <div class="counter">
                   <span class="lh-2">−</span>
-                  <p class="font-tiny"></p>
+                  <p id="quantity" class="font-tiny"></p>
                   <span class="lh-2">+</span>
                 </div>
 
@@ -375,8 +375,6 @@
           </p>
         </div>
       </section>
-
-      <!------------------------------ NON-MOBILE HEADER ------------------------------>
     </main>
 
     <footer>
