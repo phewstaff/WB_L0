@@ -1,36 +1,37 @@
 import { initializeAccordion } from "./js/accordionModule.js";
-import { cardData } from "./js/const.js";
+import { cardData, checkedCardItems } from "./js/const.js";
+import { renderCard } from "./js/components/CardRenderer.js";
+import { handleCheckboxChange } from "./js/components/HandleCheckbox.js";
 
-// Function to render the card from an array of objects
-function renderCard(data) {
+document.addEventListener("DOMContentLoaded", function () {
+  initializeAccordion();
   const cardContainer = document.getElementById("card-container");
-  const template = document.getElementById("card-template");
+  renderCard(cardData);
 
-  data.forEach((item) => {
-    const card = template.cloneNode(true);
-    card.removeAttribute("id"); // Removed the id attribute to ensure uniqueness
-    card.removeAttribute("style");
+  const selectAllCheckbox = document.getElementById("select-all");
 
-    card.querySelector("#item-checkbox").id = `item-checkbox-${item.id}`;
-    card.querySelector("label").htmlFor = `item-checkbox-${item.id}`;
-    card.querySelector("#item-image").src = item.imageUrl;
-    card.querySelector("#price-md").textContent = `${item.price} сом`;
-    card.querySelector(
-      "#discount-md"
-    ).textContent = `${item.discountPrice} сом`;
-    card.querySelector(
-      "#discount-sm"
-    ).textContent = `${item.discountPrice} сом`;
-    card.querySelector("#item-name").textContent = item.name;
-    card.querySelector("#item-color").textContent = `Цвет: ${item.color}`;
-    card.querySelector("#item-brand").textContent = item.brand;
-    card.querySelector(
-      "#remaining"
-    ).textContent = `Осталось ${item.remaining} шт.`;
-    card.querySelector("#price-sm").textContent = item.price;
+  const checkboxChangeHandler = handleCheckboxChange(
+    cardData,
+    checkedCardItems,
+    savedTotalPrice
+  );
 
-    cardContainer.appendChild(card); //adding card to dom
+  document
+    .querySelectorAll('input[name="card-item-checkbox"]')
+    .forEach((checkbox) => {
+      checkbox.addEventListener("change", checkboxChangeHandler);
+    });
+
+  selectAllCheckbox.addEventListener("change", function () {
+    const allCheckboxes = document.querySelectorAll(
+      'input[name="card-item-checkbox"]'
+    );
+    allCheckboxes.forEach((checkbox) => {
+      checkbox.checked = selectAllCheckbox.checked;
+    });
+
+    checkboxChangeHandler();
   });
-}
-initializeAccordion();
-renderCard(cardData);
+});
+
+let savedTotalPrice = parseFloat(localStorage.getItem("totalPrice")) || 0;
