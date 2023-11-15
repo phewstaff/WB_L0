@@ -1,5 +1,6 @@
 import { calculateTotalPrice } from "../calc/totalPrice.js";
 import { updateLocalStorage } from "../state/localStorage.js";
+import { updateTotalPrice } from "../calc/totalPrice.js";
 
 export function handleCheckboxChange(
   cardData,
@@ -21,12 +22,11 @@ export function handleCheckboxChange(
       }
     });
 
-    // Calculate and display the total price
     const total = calculateTotalPrice(checkedCardItems);
     console.log(total);
 
-    // Update local storage
     savedTotalPrice = total; // Update saved total price
     updateLocalStorage();
+    updateTotalPrice(total);
   };
 }
