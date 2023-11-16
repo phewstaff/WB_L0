@@ -25,20 +25,21 @@ body {
 #card-container {
   transition: max-height 0.3s ease-in-out;
   overflow: hidden;
-  max-height: 500px; /* Set a reasonable max-height */
+  max-height: 700px;
 }
 
-/* Hide the cards by default */
 #card-container.cards-hidden {
   max-height: 0;
 }
 
-/* Add rotation animation to the arrow image */
+.hidden {
+  display: none !important;
+}
+
 .accordion-img-container img {
   transition: transform 0.3s ease-in-out;
 }
 
-/* Add rotation class to rotate the arrow */
 .accordion-img-container.rotate-arrow img {
   transform: rotate(180deg);
 }
@@ -197,6 +198,10 @@ footer {
 }
 
 @media (min-width: 1024px) {
+  #card-container {
+    max-height: 500px;
+  }
+
   .with-clamp-2 {
     all: unset;
   }

@@ -108,8 +108,11 @@ img {
   content: "";
   justify-content: center;
   align-items: center;
+  background-repeat: no-repeat;
+  background-position: center center;
 
   background-color: var(--secondary);
+  background-image: url(../images/vector/checked.svg);
 }
 
 .no-label + label::before {

@@ -5,7 +5,6 @@ import { handleCheckboxChange } from "./js/components/HandleCheckbox.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   initializeAccordion();
-  const cardContainer = document.getElementById("card-container");
   renderCard(cardData);
 
   const selectAllCheckbox = document.getElementById("select-all");

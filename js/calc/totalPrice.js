@@ -1,3 +1,5 @@
+import { cardData } from "../const.js";
+
 export function calculateTotalPrice(checkedCardItems) {
   const total = checkedCardItems.reduce((sum, item) => {
     const itemPrice = item.price;
@@ -44,7 +46,22 @@ export function updateTotalPrice(total, totalItems, initialTotal) {
   const totalDiscountDisplay = document.getElementById(
     "total-discount-display"
   );
+
   totalDiscountDisplay.textContent = `${totalDiscount.toLocaleString(
     "ru-RU"
   )} сом`;
+
+  const topSelectTotalPriceDisplay = document.getElementById(
+    "top-select-total-price"
+  );
+
+  const sumQuantity = calculateSumQuantity(cardData);
+
+  const initialCardsTotal = calculateTotalPrice(cardData);
+
+  topSelectTotalPriceDisplay.textContent =
+    sumQuantity.toString() +
+    " товаров · " +
+    initialCardsTotal.toLocaleString("ru-RU") +
+    " сом";
 }

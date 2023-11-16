@@ -21,13 +21,12 @@ export function handleCheckboxChange(
     savedCheckedBoxes = JSON.stringify(checkedBoxes);
 
     // Update checkedCardItems based on checkedBoxes
-    checkedCardItems.length = 0; // Clear the array
+    checkedCardItems.length = 0;
     checkedBoxes.forEach((checkedBoxId) => {
       const itemId = parseInt(checkedBoxId);
       const checkedItem = cardData.find((item) => item.id === itemId);
       if (checkedItem) {
         checkedCardItems.push(checkedItem);
-        console.log(checkedCardItems);
       }
     });
 
@@ -35,7 +34,7 @@ export function handleCheckboxChange(
     const sumQuantity = calculateSumQuantity(checkedCardItems);
     const initialTotal = calculateInitialTotal(checkedCardItems);
 
-    savedTotalPrice = total; // Update saved total price
+    savedTotalPrice = total;
     updateTotalPrice(total, sumQuantity, initialTotal);
 
     updateLocalStorage(
@@ -44,6 +43,5 @@ export function handleCheckboxChange(
       sumQuantity,
       savedCheckedBoxes
     );
-    console.log(savedCheckedBoxes);
   };
 }

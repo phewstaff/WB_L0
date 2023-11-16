@@ -60,7 +60,7 @@ export function renderCard(data) {
 
     card.querySelector("#quantity").textContent = item.quantity;
 
-    cardContainer.appendChild(card); //adding card to dom
+    cardContainer.appendChild(card);
   });
 }
 
@@ -68,17 +68,12 @@ export function handleQuantityChange(item, change) {
   if (item.quantity + change >= 1 && item.remaining - change >= 0) {
     // Update the quantity of the item
     item.quantity += change;
-
-    // Update the remaining items
     item.remaining -= change;
 
     // Calculate the new price based on cost and quantity
     item.price = item.cost * item.quantity;
 
-    // Calculate the new initial price without discount based on cost and quantity
-
     const cardElement = document.getElementById(`card-${item.id}`);
-    console.log(cardElement);
 
     item.initialPrice = item.cost * item.quantity * 1.15;
 
@@ -95,7 +90,7 @@ export function handleQuantityChange(item, change) {
     ).textContent = `${item.initialPrice.toLocaleString("ru-RU")} сом`;
     cardElement.querySelector(
       "#initial-price-sm"
-    ).textContent = `${item.initialPrice.toLocaleString("ru-RU")}`;
+    ).textContent = `${item.initialPrice.toLocaleString("ru-RU")} сом`;
 
     cardElement.querySelector(
       "#remaining"
@@ -113,11 +108,5 @@ export function handleQuantityChange(item, change) {
       initialTotal,
       totalDiscount
     );
-
-    // Optionally, update the local storage with the updated checkedCardItems
-    // You may need to implement the corresponding functions in your localStorage.js module
-    // updateLocalStorage(checkedCardItems);
-
-    // Optionally, re-render the cards to reflect the changes visually
   }
 }
