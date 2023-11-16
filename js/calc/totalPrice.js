@@ -24,23 +24,27 @@ export function calculateInitialTotal(checkedCardItems) {
 }
 
 export function calculateTotalDiscount(initialTotal, total) {
-  const totalDiscount = total - initialTotal;
+  const totalDiscount = total - initialTotal * 1.15;
   return totalDiscount;
 }
 
 export function updateTotalPrice(total, totalItems, initialTotal) {
   const totalPriceDisplay = document.getElementById("total-price-display");
-  totalPriceDisplay.textContent = total.toLocaleString("ru-RU");
+  totalPriceDisplay.textContent = total.toLocaleString("ru-RU") + " сом";
 
   const totalItemsDisplay = document.getElementById("total-items-display");
-  totalItemsDisplay.textContent = `${totalItems} товара`;
+  totalItemsDisplay.textContent =
+    totalItems.toLocaleString("ru-RU") + " товара";
 
   const initialTotalDisplay = document.getElementById("initial-total-display");
-  initialTotalDisplay.textContent = `${initialTotal} сом`;
+  initialTotalDisplay.textContent =
+    initialTotal.toLocaleString("ru-RU") + " сом";
 
   const totalDiscount = calculateTotalDiscount(initialTotal, total);
   const totalDiscountDisplay = document.getElementById(
     "total-discount-display"
   );
-  totalDiscountDisplay.textContent = `${totalDiscount} сом`;
+  totalDiscountDisplay.textContent = `${totalDiscount.toLocaleString(
+    "ru-RU"
+  )} сом`;
 }

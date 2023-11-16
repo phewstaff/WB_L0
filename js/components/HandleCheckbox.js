@@ -27,6 +27,7 @@ export function handleCheckboxChange(
       const checkedItem = cardData.find((item) => item.id === itemId);
       if (checkedItem) {
         checkedCardItems.push(checkedItem);
+        console.log(checkedCardItems);
       }
     });
 
@@ -43,5 +44,6 @@ export function handleCheckboxChange(
       sumQuantity,
       savedCheckedBoxes
     );
+    console.log(savedCheckedBoxes);
   };
 }
