@@ -14,13 +14,13 @@ export function renderCard(data) {
       "ru-RU"
     )} сом`;
     card.querySelector(
-      "#discount-md"
-    ).textContent = `${item.discountPrice.toLocaleString("ru-RU")} сом`;
+      "#initial-price-md"
+    ).textContent = `${item.initialPrice.toLocaleString("ru-RU")} сом`;
     card.querySelector("#price-sm").textContent =
       item.price.toLocaleString("ru-RU");
     card.querySelector(
-      "#discount-sm"
-    ).textContent = `${item.discountPrice.toLocaleString("ru-RU")} сом`;
+      "#initial-price-sm"
+    ).textContent = `${item.initialPrice.toLocaleString("ru-RU")} сом`;
 
     card.querySelector("#item-image").src = item.imageUrl;
     card.querySelector("#item-name").textContent = item.name;

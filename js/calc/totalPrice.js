@@ -15,14 +15,32 @@ export function calculateSumQuantity(checkedCardItems) {
   return sumQuantity;
 }
 
-export function updateTotalPrice(total, totalItems) {
+export function calculateInitialTotal(checkedCardItems) {
+  const initialTotal = checkedCardItems.reduce(
+    (sum, item) => sum + item.initialPrice,
+    0
+  );
+  return initialTotal;
+}
+
+export function calculateTotalDiscount(initialTotal, total) {
+  const totalDiscount = total - initialTotal;
+  return totalDiscount;
+}
+
+export function updateTotalPrice(total, totalItems, initialTotal) {
   const totalPriceDisplay = document.getElementById("total-price-display");
   totalPriceDisplay.textContent = total.toLocaleString("ru-RU");
 
   const totalItemsDisplay = document.getElementById("total-items-display");
   totalItemsDisplay.textContent = `${totalItems} товара`;
 
-  const totalWithoutDiscountDisplay = document.getElementById(
-    "total-without-discount-display"
+  const initialTotalDisplay = document.getElementById("initial-total-display");
+  initialTotalDisplay.textContent = `${initialTotal} сом`;
+
+  const totalDiscount = calculateTotalDiscount(initialTotal, total);
+  const totalDiscountDisplay = document.getElementById(
+    "total-discount-display"
   );
+  totalDiscountDisplay.textContent = `${totalDiscount} сом`;
 }

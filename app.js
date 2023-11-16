@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     checkedCardItems,
     savedTotalPrice,
     totalQuantity,
+    savedInitialTotal,
     savedCheckedBoxes
   );
 
@@ -38,6 +39,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const savedTotalPrice = parseFloat(localStorage.getItem("totalPrice")) || 0;
 const totalQuantity = parseInt(localStorage.getItem("totalQuantity")) || 0;
+const savedInitialTotal = localStorage.getItem("savedInitialTotal") || 0;
 const savedCheckedBoxes = localStorage.getItem("totalQuantity") || "";
-
-console.log(savedCheckedBoxes);

@@ -2,6 +2,7 @@ import {
   calculateTotalPrice,
   calculateSumQuantity,
   updateTotalPrice,
+  calculateInitialTotal,
 } from "../calc/totalPrice.js";
 import { updateLocalStorage } from "../state/localStorage.js";
 
@@ -9,6 +10,7 @@ export function handleCheckboxChange(
   cardData,
   checkedCardItems,
   savedTotalPrice,
+  savedInitialTotal,
   savedTotalQuantity,
   savedCheckedBoxes
 ) {
@@ -30,9 +32,10 @@ export function handleCheckboxChange(
 
     const total = calculateTotalPrice(checkedCardItems);
     const sumQuantity = calculateSumQuantity(checkedCardItems);
+    const initialTotal = calculateInitialTotal(checkedCardItems);
 
     savedTotalPrice = total; // Update saved total price
-    updateTotalPrice(total, sumQuantity);
+    updateTotalPrice(total, sumQuantity, initialTotal);
 
     updateLocalStorage(
       checkedCardItems,
