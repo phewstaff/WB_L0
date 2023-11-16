@@ -13,7 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const checkboxChangeHandler = handleCheckboxChange(
     cardData,
     checkedCardItems,
-    savedTotalPrice
+    savedTotalPrice,
+    totalQuantity,
+    savedCheckedBoxes
   );
 
   document
@@ -34,4 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-let savedTotalPrice = parseFloat(localStorage.getItem("totalPrice")) || 0;
+const savedTotalPrice = parseFloat(localStorage.getItem("totalPrice")) || 0;
+const totalQuantity = parseInt(localStorage.getItem("totalQuantity")) || 0;
+const savedCheckedBoxes = localStorage.getItem("totalQuantity") || "";
+
+console.log(savedCheckedBoxes);

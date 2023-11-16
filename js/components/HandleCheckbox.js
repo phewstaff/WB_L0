@@ -1,16 +1,22 @@
-import { calculateTotalPrice } from "../calc/totalPrice.js";
+import {
+  calculateTotalPrice,
+  calculateSumQuantity,
+  updateTotalPrice,
+} from "../calc/totalPrice.js";
 import { updateLocalStorage } from "../state/localStorage.js";
-import { updateTotalPrice } from "../calc/totalPrice.js";
 
 export function handleCheckboxChange(
   cardData,
   checkedCardItems,
-  savedTotalPrice
+  savedTotalPrice,
+  savedTotalQuantity,
+  savedCheckedBoxes
 ) {
   return function () {
     const checkedBoxes = Array.from(
       document.querySelectorAll('input[name="card-item-checkbox"]:checked')
     ).map((checkedBox) => checkedBox.id);
+    savedCheckedBoxes = JSON.stringify(checkedBoxes);
 
     // Update checkedCardItems based on checkedBoxes
     checkedCardItems.length = 0; // Clear the array
@@ -23,10 +29,16 @@ export function handleCheckboxChange(
     });
 
     const total = calculateTotalPrice(checkedCardItems);
-    console.log(total);
+    const sumQuantity = calculateSumQuantity(checkedCardItems);
 
     savedTotalPrice = total; // Update saved total price
-    updateLocalStorage();
-    updateTotalPrice(total);
+    updateTotalPrice(total, sumQuantity);
+
+    updateLocalStorage(
+      checkedCardItems,
+      savedTotalPrice,
+      sumQuantity,
+      savedCheckedBoxes
+    );
   };
 }
