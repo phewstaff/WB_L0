@@ -80,6 +80,15 @@ hr.divider {
   line-height: var(--line-height-medium);
   background-color: var(--secondary);
   border-radius: var(--border-primary);
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
 }
 
 .instant-withdrawal {
@@ -166,6 +175,13 @@ main {
       }
     }
   }
+
+  .edit-button {
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 /* ---------------------------------------------------------------------------------------------------- */
 
@@ -246,6 +262,12 @@ footer {
         font-size: var(--font-size-lg);
         line-height: var(--line-height-big);
       }
+    }
+
+    .cancel-info {
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 8px;
     }
   }
 

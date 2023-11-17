@@ -52,10 +52,25 @@
   input:not(:placeholder-shown) + label {
     top: -5px;
   }
+
+  .error {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .error-message {
+    color: var(--accent);
+    position: absolute;
+    top: 40px;
+  }
 }
 
 @media (min-width: 1024px) {
   .receiver-form {
+    .error-message {
+      top: 50px;
+    }
+
     gap: 0;
     flex-wrap: wrap;
 

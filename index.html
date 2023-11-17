@@ -182,7 +182,7 @@
               <h1 class="forms-title ls-negative">Способ доставки</h1>
 
               <button class="edit">
-                <h1>Изменить</h1>
+                <h1 class="edit-button">Изменить</h1>
               </button>
             </div>
 
@@ -231,7 +231,7 @@
             <h1 class="forms-title ls-negative">Способ оплаты</h1>
 
             <button class="edit">
-              <h1>Изменить</h1>
+              <h1 class="edit-button">Изменить</h1>
             </button>
           </div>
 
@@ -254,33 +254,69 @@
           <h1 class="forms-title ls-negative">Получатель</h1>
         </div>
 
-        <form action="" class="receiver-form mt-2">
+        <form id="receiver-form" class="receiver-form mt-2">
           <div class="first-row">
             <div class="input-container">
-              <input placeholder=" " required id="name" type="text" />
+              <input
+                required
+                title="заполните поле"
+                placeholder=" "
+                id="name"
+                type="text"
+              />
               <label for="name">Имя</label>
+              <p class="error-message" id="name-error"></p>
             </div>
 
             <div class="input-container">
-              <input placeholder=" " required id="surname" type="text" />
+              <input
+                required
+                title="заполните поле"
+                placeholder=" "
+                id="surname"
+                type="text"
+              />
               <label for="surname">Фамилия</label>
+              <p class="error-message" id="surname-error"></p>
             </div>
           </div>
 
           <div class="second-row">
             <div class="input-container">
-              <input placeholder=" " required id="email" type="email" />
+              <input
+                required
+                title="заполните поле"
+                placeholder=" "
+                id="email"
+                type="text"
+              />
               <label for="email">Почта</label>
+              <p class="error-message" id="email-error"></p>
             </div>
 
             <div class="input-container">
-              <input placeholder=" " required id="number" type="text" />
+              <input
+                required
+                title="заполните поле"
+                placeholder=" "
+                id="number"
+                type="text"
+              />
               <label for="number">Телефон</label>
+              <p class="error-message" id="number-error"></p>
             </div>
 
             <div class="input-container">
-              <input placeholder=" " required id="INN" type="text" />
+              <input
+                maxlength="12"
+                required
+                title="заполните поле"
+                placeholder=" "
+                id="INN"
+                type="text"
+              />
               <label for="INN">ИНН</label>
+              <p class="error-message" id="INN-error"></p>
             </div>
           </div>
         </form>
@@ -310,6 +346,7 @@
         <div class="sm-hidden text-w-edit mt-5">
           <h1 class="font-sm lh-3">Доставка в пункт выдачи</h1>
           <img
+            class="edit-button"
             src="assets/images/vector/edit-icon.svg"
             alt="edit-button-icon"
           />
@@ -335,6 +372,7 @@
           <h1 class="font-sm lh-3">Оплата картой</h1>
           <button>
             <img
+              class="edit-button"
               src="assets/images/vector/edit-icon.svg"
               alt="edit-button-icon"
             />
@@ -369,7 +407,9 @@
           </div>
         </div>
 
-        <button class="primary-button mt-5">Заказать</button>
+        <button form="receiver-form" type="submit" class="primary-button mt-5">
+          Заказать
+        </button>
 
         <div class="user-agreement flex">
           <img
@@ -405,6 +445,17 @@
         </nav>
       </div>
     </footer>
+
+    <div class="popup">
+      <div class="content">
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+          libero voluptatum omnis incidunt est possimus, iste ex commodi et,
+          harum eaque recusandae corrupti illo consequuntur itaque amet error
+          dolorum totam.
+        </h1>
+      </div>
+    </div>
 
     <script type="module" src="./app.js"></script>
   </body>
