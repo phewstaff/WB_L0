@@ -118,3 +118,34 @@ img {
 .no-label + label::before {
   margin: 0;
 }
+
+/* Custom radio inputs */
+
+input[type="radio"]:after {
+  width: 5px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: white;
+  content: "";
+  display: inline-block;
+  visibility: hidden;
+  outline: 1px solid var(--secondary);
+}
+
+input[type="radio"]:checked:after {
+  width: 5px;
+  height: 5px;
+  border-radius: 15px;
+  top: -2px;
+  left: 2.5px;
+  position: relative;
+  background-color: white;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+  outline: 5px solid var(--secondary);
+}

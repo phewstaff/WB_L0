@@ -6,6 +6,7 @@
 @import "FormComponent.css";
 @import "TotalBillComponent.css";
 @import "CardComponent.css";
+@import "ModalComponent.css";
 @import "utils.css";
 
 @import url("https://fonts.cdnfonts.com/css/segoe-ui-4");
@@ -103,6 +104,17 @@ hr.divider {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.popup {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  transition: 0.5s;
 }
 
 /* ---------------------------------------------------------------------------------------------------- */
@@ -288,7 +300,6 @@ footer {
       display: flex;
       flex-direction: column;
     }
-
     & img {
       max-width: 28px;
       max-height: 28px;

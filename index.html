@@ -181,7 +181,7 @@
             <div class="text-w-edit">
               <h1 class="forms-title ls-negative">Способ доставки</h1>
 
-              <button class="edit">
+              <button data-modal="modal-delivery" class="edit">
                 <h1 class="edit-button">Изменить</h1>
               </button>
             </div>
@@ -231,7 +231,7 @@
             <h1 class="forms-title ls-negative">Способ оплаты</h1>
 
             <button class="edit">
-              <h1 class="edit-button">Изменить</h1>
+              <h1 data-modal="modal-card" class="edit-button">Изменить</h1>
             </button>
           </div>
 
@@ -346,6 +346,7 @@
         <div class="sm-hidden text-w-edit mt-5">
           <h1 class="font-sm lh-3">Доставка в пункт выдачи</h1>
           <img
+            data-modal="modal-delivery"
             class="edit-button"
             src="assets/images/vector/edit-icon.svg"
             alt="edit-button-icon"
@@ -370,7 +371,7 @@
 
         <div class="sm-hidden text-w-edit mt-5">
           <h1 class="font-sm lh-3">Оплата картой</h1>
-          <button>
+          <button data-modal="modal-card">
             <img
               class="edit-button"
               src="assets/images/vector/edit-icon.svg"
@@ -446,14 +447,70 @@
       </div>
     </footer>
 
-    <div class="popup">
-      <div class="content">
-        <h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-          libero voluptatum omnis incidunt est possimus, iste ex commodi et,
-          harum eaque recusandae corrupti illo consequuntur itaque amet error
-          dolorum totam.
-        </h1>
+    <div class="modal" id="modal-delivery">
+      <div class="modal-bg modal-exit"></div>
+      <div class="modal-container">
+        <h1>Amazing Modal</h1>
+        <h2>Pure Vanilla JavaScript</h2>
+        <button class="modal-close modal-exit">X</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-card">
+      <div class="modal-bg modal-exit"></div>
+      <div class="modal-container modal-card-container">
+        <div class="text-w-edit flex justify-between">
+          <h1 class="font-sm lh-3">Способ оплаты</h1>
+          <button class="modal-close modal-exit">
+            <img src="assets/images/vector/Union.svg" alt="" />
+          </button>
+        </div>
+        <form id="cards-form" class="cards-form">
+          <div class="card-radio-item">
+            <img src="assets/images/vector/MIR-icon.svg" alt="" />
+            <input
+              type="radio"
+              id="MIR"
+              name="card"
+              value="1234 56•• •••• 1234"
+            />
+            <p>1234 56•• •••• 1234</p>
+          </div>
+
+          <div class="card-radio-item">
+            <img src="assets/images/vector/visa.svg" alt="" />
+
+            <input
+              type="radio"
+              id="VISA"
+              name="card"
+              value="1234 56•• •••• 1234"
+            />
+            <p>1234 56•• •••• 1234</p>
+          </div>
+          <div class="card-radio-item">
+            <img src="assets/images/vector/maestro.svg" alt="" />
+            <input
+              type="radio"
+              id="Maestro"
+              name="card"
+              value="1234 56•• •••• 1234"
+            />
+            <p>1234 56•• •••• 1234</p>
+          </div>
+          <div class="card-radio-item">
+            <img src="assets/images/vector/mastercard.svg" alt="" />
+            <input
+              type="radio"
+              id="MasterCard"
+              name="card"
+              value="1234 56•• •••• 1234"
+            />
+            <p>1234 56•• •••• 1234</p>
+          </div>
+        </form>
+
+        <button class="primary-button modal-close modal-exit">Выбрать</button>
       </div>
     </div>
 

@@ -1,13 +1,15 @@
-import { initializeAccordion } from "./js/accordionModule.js";
+import { initializeAccordion } from "./js/features/accordionModule.js";
 import { cardData, checkedCardItems } from "./js/const.js";
 import { renderCard } from "./js/components/CardRenderer.js";
 import { handleCheckboxChange } from "./js/components/HandleCheckbox.js";
 import { setupFormValidation } from "./js/features/formValidation.js";
+import { togglePopup } from "./js/features/popup.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   setupFormValidation();
   initializeAccordion();
   renderCard(cardData);
+  togglePopup();
 
   const selectAllCheckbox = document.getElementById("select-all");
 
