@@ -152,6 +152,7 @@ main {
   }
 
   .form-cards-wrapper {
+    overflow: hidden;
     background-color: white;
     padding: 16px 16px 24px 16px;
     border-radius: var(--border-radius-card);
@@ -237,12 +238,13 @@ footer {
   main {
     display: grid;
     padding: 0 24px;
+    padding-bottom: 24px;
     grid-template-columns: 1fr minmax(303px, 303px);
 
     .form-cards-wrapper {
       grid-column: 1;
       padding: 16px 24px 24px 24px;
-      max-width: 638px;
+      max-width: 800px;
     }
 
     .cart-wrapper {
@@ -314,6 +316,7 @@ footer {
   }
 
   footer {
+    margin-top: 24px;
     & nav {
       display: none;
     }

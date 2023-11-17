@@ -25,6 +25,10 @@
   .primary-button {
     margin-top: auto;
   }
+
+  & button {
+    cursor: pointer;
+  }
 }
 
 .close {
@@ -132,6 +136,7 @@
 
     & input {
       order: -1;
+      cursor: pointer;
     }
 
     & img {
@@ -148,6 +153,9 @@
 
 .delivery-buttons {
   & button {
+    cursor: pointer;
+    font-family: "Segoe UI SemiBold";
+    font-size: var(--font-size-small);
     outline: 1px solid var(--secondary);
     border-radius: 20px;
     width: 140px;

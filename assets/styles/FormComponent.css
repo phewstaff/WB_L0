@@ -67,6 +67,7 @@
 
 @media (min-width: 1024px) {
   .receiver-form {
+    padding-bottom: 18px;
     .error-message {
       top: 50px;
     }
