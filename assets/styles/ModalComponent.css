@@ -140,3 +140,23 @@
     }
   }
 }
+
+.rating {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.delivery-buttons {
+  & button {
+    outline: 1px solid var(--secondary);
+    border-radius: 20px;
+    width: 140px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .make-active {
+    outline: 3px solid var(--secondary);
+  }
+}

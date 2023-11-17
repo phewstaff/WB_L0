@@ -450,9 +450,92 @@
     <div class="modal" id="modal-delivery">
       <div class="modal-bg modal-exit"></div>
       <div class="modal-container">
-        <h1>Amazing Modal</h1>
-        <h2>Pure Vanilla JavaScript</h2>
-        <button class="modal-close modal-exit">X</button>
+        <div class="text-w-edit flex justify-between">
+          <h1 class="font-sm lh-3">Способ доставки</h1>
+          <button class="modal-close modal-exit">
+            <img src="assets/images/vector/Union.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="delivery-buttons flex gap-2 justify-around">
+          <button class="make-active">В пункт выдачи</button
+          ><button>Курьером</button>
+        </div>
+
+        <h3>Мои адреса</h3>
+        <form id="cards-form" class="cards-form">
+          <div class="card-radio-item">
+            <input
+              type="radio"
+              id="MIR"
+              name="card"
+              value="1234 56•• •••• 1234"
+            />
+            <p>г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+          </div>
+          <div class="rating flex gap-2">
+            <img
+              class="star"
+              src="assets/images/vector/rating/rating/star_fill.svg"
+              alt=""
+            />
+            <p class="font-mini">4.99 Ежедневно с 10 до 21</p>
+          </div>
+
+          <div class="card-radio-item">
+            <input
+              type="radio"
+              id="VISA"
+              name="card"
+              value="1234 56•• •••• 1234"
+            />
+            <p>г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+          </div>
+          <div class="rating flex gap-2">
+            <img
+              class="star"
+              src="assets/images/vector/rating/rating/star_fill.svg"
+              alt=""
+            />
+            <p class="font-mini">4.99 Ежедневно с 10 до 21</p>
+          </div>
+          <div class="card-radio-item">
+            <input
+              type="radio"
+              id="Maestro"
+              name="card"
+              value="1234 56•• •••• 1234"
+            />
+            <p>г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+          </div>
+          <div class="rating flex gap-2">
+            <img
+              class="star"
+              src="assets/images/vector/rating/rating/star_fill.svg"
+              alt=""
+            />
+            <p class="font-mini">4.99 Ежедневно с 10 до 21</p>
+          </div>
+          <div class="card-radio-item">
+            <input
+              type="radio"
+              id="MasterCard"
+              name="card"
+              value="1234 56•• •••• 1234"
+            />
+            <p>г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1</p>
+          </div>
+          <div class="rating flex gap-2">
+            <img
+              class="star"
+              src="assets/images/vector/rating/rating/star_fill.svg"
+              alt=""
+            />
+            <p class="font-mini">4.99 Ежедневно с 10 до 21</p>
+          </div>
+        </form>
+
+        <button class="primary-button modal-close modal-exit">Выбрать</button>
       </div>
     </div>
 
